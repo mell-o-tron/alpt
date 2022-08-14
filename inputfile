@@ -4,9 +4,9 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amsfonts}
+\usepackage{tikz}
 \usepackage{listings}
 \usepackage{courier}
-\usepackage{MnSymbol}
 
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \lstdefinestyle{c_style}{
@@ -27,23 +27,7 @@
     tabsize=2
 }
 
-\lstdefinestyle{c_style}{
-    language=python,
-    backgroundcolor=\color{backcolour},
-    numberstyle=\tiny,
-    basicstyle=\ttfamily\footnotesize,
-    keywordstyle=\bfseries,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=left,
-    numbersep=5pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2
-}
+\lstset{style=c_style}
 
 \begin{document}
 
@@ -52,7 +36,7 @@
 
 First of all, let's include the \texttt{stdio} library:
 
-\lstset{style=c_style}
+
 §<main.c> § #include<stdio>
 §
 
@@ -63,7 +47,6 @@ Then, let's create a function \texttt{main}, and call \texttt{puts}:
 }§
 
 \subsection{Hello, alpt! in python}
-\lstset{style=py_style}
 
 §<hello.py> § print("Hello, alept!")
 §
