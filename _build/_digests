@@ -1,0 +1,5 @@
+"Rule: ocaml dependencies ml (%=alpt )": "\253|!\146\252M\179PK\020`\210\205\175_\214"
+"Rule: ocaml: ml & cmi -> cmx & o (%=alpt )": "\024|B\186\144\236\178\252\169\024\149\212\027u\173n"
+"Rule: ocaml: ml -> cmo & cmi (%=alpt )": "\234\222\207\206\029\204\139\132_G\024\229x\188Q\234"
+"Resource: /home/mrdalliard/Desktop/alpt/alpt.ml": "\170\129o\229\166\235\233\165L}\232\219\025\241\199\164"
+"Rule: ocaml: cmx* & o* -> native (%=alpt )": "\240}\029Y\158\191\165\176\155\231\005;\181\233\171\185"

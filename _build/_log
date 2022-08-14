@@ -1,0 +1,10 @@
+### Starting build.
+# Target: alpt.ml.depends, tags: { package(core), package(re2), extension:ml, file:alpt.ml, ocaml, ocamldep, quiet, thread }
+ocamlfind ocamldep -package core -package re2 -modules alpt.ml > alpt.ml.depends
+# Target: alpt.cmo, tags: { package(core), package(re2), byte, compile, extension:cmo, extension:ml, file:alpt.cmo, file:alpt.ml, implem, ocaml, quiet, thread }
+ocamlfind ocamlc -c -thread -package core -package re2 -o alpt.cmo alpt.ml
+# Target: alpt.cmx, tags: { package(core), package(re2), compile, extension:cmx, extension:ml, file:alpt.cmx, file:alpt.ml, implem, native, ocaml, quiet, thread }
+ocamlfind ocamlopt -c -thread -package core -package re2 -o alpt.cmx alpt.ml
+# Target: alpt.native, tags: { package(core), package(re2), dont_link_with, extension:native, file:alpt.native, link, native, ocaml, program, quiet, thread }
+ocamlfind ocamlopt -linkpkg -thread -package core -package re2 alpt.cmx -o alpt.native
+# Compilation successful.
