@@ -20,7 +20,7 @@ let text = read_from_file Sys.argv.(1);;
 
 print_string text;;
 
-let re = Re2.create_exn "§\\s*<([a-zA-z._]+) : ([a-zA-z]*)>\\s*§\\s*([^§]*)\\s*§";;
+let re = Re2.create_exn "§\\s*<([a-zA-z._]+)\\s*:\\s*([a-zA-z]*)>\\s*§\\s*([^§]*)\\s*§";;
 let matches = Re2.find_all_exn re text;;
 let files = (Re2.find_all_exn ~sub:(` Index 1) re text, Re2.find_all_exn ~sub:(` Index 3) re text, Re2.find_all_exn ~sub:(` Index 2) re text);;
 
