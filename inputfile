@@ -9,8 +9,7 @@
 \usepackage{courier}
 
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-\lstdefinestyle{c_style}{
-    language=caml,
+\lstdefinestyle{listing_style}{
     backgroundcolor=\color{backcolour},
     numberstyle=\tiny,
     basicstyle=\ttfamily\footnotesize,
@@ -27,7 +26,7 @@
     tabsize=2
 }
 
-\lstset{style=c_style}
+\lstset{style=listing_style}
 
 \begin{document}
 
@@ -37,18 +36,18 @@
 First of all, let's include the \texttt{stdio} library:
 
 
-§<main.c> § #include<stdio>
+§<main.c : c> § #include<stdio>
 §
 
 Then, let's create a function \texttt{main}, and call \texttt{puts}:
 
-§<main.c> § int main(){
+§<main.c : c> § int main(){
    puts("Hello, alpt!");
 }§
 
 \subsection{Hello, alpt! in python}
 
-§<hello.py> § print("Hello, alept!")
+§<hello.py : python> § print("Hello, alept!")
 §
 
 

@@ -20,9 +20,9 @@ let text = read_from_file Sys.argv.(1);;
 
 print_string text;;
 
-let re = Re2.create_exn "§\\s*<([^§]+)>\\s*§\\s*([^§]*)\\s*§";;
+let re = Re2.create_exn "§\\s*<([a-zA-z._]+) : ([a-zA-z]*)>\\s*§\\s*([^§]*)\\s*§";;
 let matches = Re2.find_all_exn re text;;
-let files = (Re2.find_all_exn ~sub:(` Index 1) re text, Re2.find_all_exn ~sub:(` Index 2) re text, Re2.find_all_exn re text);;
+let files = (Re2.find_all_exn ~sub:(` Index 1) re text, Re2.find_all_exn ~sub:(` Index 3) re text, Re2.find_all_exn ~sub:(` Index 2) re text);;
 
 let rec print_matches ls = match ls with
     | x :: x1 -> print_string("[ "^x^" ]\n") ; print_matches x1
@@ -32,7 +32,7 @@ let rec print_all a = match a with
     | (x :: x1, y :: y1, z :: z1) -> print_string("[ "^x^" ]\t[ "^y^" ]\t[ "^z^" ]\n") ; print_all (x1, y1, z1)
     | _ -> ();;
 
-let subs s = Re2.rewrite_exn re ~template:"\\\\begin{lstlisting}\n\\2\\\\end{lstlisting}" s;;
+let subs s = Re2.rewrite_exn re ~template:"\\\\begin{lstlisting}[language = \\2]\n\\3\\\\end{lstlisting}" s;;
 
 print_all(files);;
 
