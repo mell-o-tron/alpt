@@ -11,5 +11,6 @@ Write LaTeX into an input file, and write your code snippets in the following, v
 Then run `./alpt.native your_file`, and it will generate the code for all your snippets (combined by filename) and a LaTeX file containing the docs. If the language you specified is supported by `lstlisting`, the listings will have some simple syntax highlighting, some parameters of which can be controlled from your input file.
 
 ## Notes
+- Do not use the symbol `§` in the LaTeX (just use `\S` for it) and the code snippets. If the symbol `§` is part of the syntax of your language, then your language is not supported yet. If you need to print that symbol, I'm sure your language of choice has several ways to represent it. To save you the search, it's the unicode character `U + 00A7`.
 - I am rather new to Ocaml, so the code for this is quite horrendous. Oh well.
 - **Bigger problem**: the executable is huge, probably because of the modules i've used, and I have no idea how to strip it down. If any of you has any idea, please let me know.
