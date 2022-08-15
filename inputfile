@@ -36,7 +36,7 @@
 First of all, let's include the \texttt{stdio} library:
 
 
-§<main.c : c> § #include<stdio>
+§<main.c : c> § #include<stdio.h>
 §
 
 Then, let's create a function \texttt{main}, and call \texttt{puts}:
