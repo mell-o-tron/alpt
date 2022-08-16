@@ -13,4 +13,5 @@ Then run `./alpt.native your_file`, and it will generate the code for all your s
 ## Notes
 - Do not use the symbol `§` in the LaTeX (just use `\S` for it) and the code snippets. If the symbol `§` is part of the syntax of your language, then your language is not supported yet. If you need to print that symbol, I'm sure your language of choice has several ways to represent it. To save you the search, it's the unicode character `U + 00A7`.
 - I am rather new to Ocaml, so the code for this is quite horrendous. Oh well.
-- **Bigger problem**: the executable is huge, probably because of the modules i've used, and I have no idea how to strip it down. If any of you has any idea, please let me know.
+- I'm using `upx --best` to compress the executable, which would otherwise be huge.
+- Among the tools you will need are an LaTeX, with the `lstlisting` package, an OCaml installation, `Re2` and `core` (OCaml modules, can be installed from `opam`), `ocamlbuild`, `ocamlfind` and I guess `upx`. If I missed something, do let me know.
